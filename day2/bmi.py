@@ -7,3 +7,4 @@ print(type(weight))
 print(type(height))
 bmi = weight / height ** 2 
 print(bmi)
+
