@@ -1,1 +1,5 @@
 cmd + opt + T > surround with
+value.strip().replace('%', '')
+re.search(r'\d+', value)
+map(str, [2, 5])  →  ['2', '5'] >>    ", ".join(['2', '5'])  →  "2, 5"
+input("message").lower()

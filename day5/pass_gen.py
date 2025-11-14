@@ -25,7 +25,6 @@ for i in range(nr_numbers):
 # print(output_string)
 random.shuffle(output_string)
 # print(output_string)
-
 output_password = ""
 for i in output_string:  
      output_password += i

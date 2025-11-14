@@ -13,7 +13,7 @@ def ans():
         else:
             print("You must answer in A or B only!")
 
-    
+
 def play_game():
     first_A = rand_celeb()
     second_B = rand_celeb()

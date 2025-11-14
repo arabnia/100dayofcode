@@ -10,11 +10,11 @@ travel_log =[
         "cities": ["Berlin", "Hamburg", "Stuttgart"]
     }
 ]
-# travel_dict = {
-#         "contry": "France",
-#         "visit": 12,
-#         "cities": ["Paris", "Little", "Dijon"]
-#     }
+travel_dict = {
+        "contry": "France",
+        "visit": 12,
+        "cities": ["Paris", "Little", "Dijon"]
+    }
 
 def add_new_contry(contry, visits, cities):
     travel_log.append({"contry": contry, "visit": visits, "cities": cities}) 

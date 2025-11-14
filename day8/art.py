@@ -6,4 +6,4 @@ a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8
  `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88   
  ''']
 
-print(type(caesar_logo))
+print(caesar_logo)
