@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6de29179-73bc-48cd-a27a-15621282fe32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/day24/food.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day24/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day24/scoreboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day24/snake.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day24/test_filereadwrite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/100dayofcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/100dayofcode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day24/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day14/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/day14/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day16/object.py" beforeDir="false" afterPath="$PROJECT_DIR$/day16/object.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day2/calculate_bullish_beerish.py" beforeDir="false" afterPath="$PROJECT_DIR$/day2/calculate_bullish_beerish.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day4/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/day4/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day4/screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/day4/screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day4/sudo_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/day4/sudo_matrix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day5/height_av.py" beforeDir="false" afterPath="$PROJECT_DIR$/day5/height_av.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day5/pass_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/day5/pass_gen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day8/art.py" beforeDir="false" afterPath="$PROJECT_DIR$/day8/art.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day8/prim.py" beforeDir="false" afterPath="$PROJECT_DIR$/day8/prim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day9/dict_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/day9/dict_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycharmShortcut" beforeDir="false" afterPath="$PROJECT_DIR$/pycharmShortcut" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day24/test_filereadwrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/day24/test_filereadwrite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +65,7 @@
     "Python.snake.executor": "Run",
     "Python.sudo_matrix.executor": "Run",
     "Python.test.executor": "Run",
+    "Python.test_filereadwrite.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
