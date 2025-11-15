@@ -13,14 +13,22 @@
 
 
 # im writing inherit class in python code
-class Animal:
-    def speak(self):
-        print("Animal")
+# class Animal:
+#     def speak(self):
+#         print("Animal")
+#
+# class Dog(Animal):
+#     def speak(self):
+#         print("Dog")
+#
+#
+# p1 = Dog()
+# p1.speak()
+import turtle
+t = turtle.Turtle()
+t.forward(100)
+t.left(90)
+t.clear()  # removes the drawing
 
-class Dog(Animal):
-    def speak(self):
-        print("Dog")
-
-
-p1 = Dog()
-p1.speak()
+s = turtle.Screen()
+s.exitonclick()
