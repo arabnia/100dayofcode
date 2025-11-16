@@ -1,9 +1,13 @@
-with open("output.txt", "w") as f:
-    f.write("Hossein is the writer!")
+# with open("output.txt", "w") as f:
+#     f.write("Hossein is the writer!")
+#
+with open("../day24-1/Input/Names/invited_names.txt", mode="r") as f:
+    names = f.readline()
+    names = f.readline()
 
-with open("append.txt", mode="a") as f:
-    f.write("\nHossein is the appender!")
+print(names)
 
-with open("input.txt", "r") as f:
-    print(f.read())
+
+# with open("input.txt", "r") as f:
+#     print(f.read())
 
