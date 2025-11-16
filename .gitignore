@@ -1,3 +1,4 @@
 decorator/
+.idea
 venv
 **/__pycache__/**
