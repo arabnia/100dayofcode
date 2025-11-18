@@ -52,12 +52,7 @@ while len(answers) != 50:
             fill_map(data[data.state.str.lower() == answer].state.iloc[0])
 
 # you must learn!
-learn_state = []
-all_states = data.state.to_list()
-print(all_states)
-for state in all_states:
-    if state not in answers:
-        learn_state.append(state)
+learn_state = [ state for state in data.state.to_list() if state not in answers ]
 
 learn_state = pd.DataFrame(learn_state)
 learn_state.to_csv("data/learn_states.csv")
