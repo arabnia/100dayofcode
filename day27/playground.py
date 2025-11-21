@@ -19,7 +19,7 @@ class Car:
     def __init__(self, **kwargs):
         self.name = kwargs.get("name")
         self.price = kwargs.get("price")
-car1 = Car(name="exocar")
+car1 = Car(name="exocar"   )
 
 print(car1.name)
 print(car1.price)
