@@ -1,0 +1,15 @@
+from tkinter import *
+window = Tk()
+window.title("GUI Example")
+window.minsize(400, 300)
+label1 = Label(text="Label 1")
+label1.grid(row=0, column=0)
+button = Button(text="Button 1")
+button.grid(row=1, column=1)
+new_button = Button(text="Button 2")
+new_button.grid(row=0, column=3)
+entry1 = Entry()
+entry1.insert(END, "Entry 1")
+entry1.grid(row=3, column=4)
+
+window.mainloop()
