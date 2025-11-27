@@ -62,6 +62,8 @@ def search():
             messagebox.showinfo(data[website_entry.get()], f"Email: {data[website_entry.get()]["email"]}\n Password: {data[website_entry.get()]["password"]}")
     except KeyError:
         messagebox.showerror("Error", "No data found")
+    except FileNotFoundError:
+        messagebox.showerror("Error", "No data found")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
