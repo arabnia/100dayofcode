@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import pyperclip
-
+import json
 from sqlalchemy.orm import joinedload
 
 
@@ -30,14 +30,39 @@ def password_generator():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
+    data_dict = {
+        website_var.get(): {
+            "email": email_username_entry.get(),
+            "password": password_entry.get(),
+        }
+    }
     if len(website_var.get()) == 0 or len(email_username_entry.get()) == 0 or len(password_entry.get()) == 0:
         messagebox.showerror("Error", "Please fill all fields")
     else:
         if messagebox.askokcancel("Quit", f"password {password_entry.get()} for website {website_entry.get()} will be saved\n you want to save or quit?"):
-            with open("data.txt", "a") as file:
-                file.write(f"{website_var.get()} | {email_username_entry.get()} | {password_entry.get()}\n")
-            website_entry.delete(0, END)
-            password_entry.delete(0, END)
+            try:
+                with open("data.json", "r") as file:
+                    data = json.load(file)
+                    data.update(data_dict)
+            except FileNotFoundError:
+                with open("data.json", "w") as file:
+                    json.dump(data_dict, file, indent=4)
+            else:
+                with open("data.json", "w") as file:
+                    # file.write(f"{website_var.get()} | {email_username_entry.get()} | {password_entry.get()}\n")
+                    json.dump(data, file, indent=4)
+            finally:
+                website_entry.delete(0, END)
+                password_entry.delete(0, END)
+# ------------------------ Search Function -----------------------------#
+def search():
+    try:
+        with open("data.json", "r") as file:
+            data = json.load(file)
+            messagebox.showinfo(data[website_entry.get()], f"Email: {data[website_entry.get()]["email"]}\n Password: {data[website_entry.get()]["password"]}")
+    except KeyError:
+        messagebox.showerror("Error", "No data found")
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -65,8 +90,8 @@ genpass_button.grid(row=3, column=2)
 
 # Entry section
 website_var = StringVar()
-website_entry = Entry(width=38, textvariable=website_var)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry = Entry(width=21, textvariable=website_var)
+website_entry.grid(row=1, column=1)
 website_entry.focus()
 
 email_var = StringVar()
@@ -77,9 +102,11 @@ email_username_entry.insert(0, "hoseinarabnia@gmail.com")
 password_var = StringVar()
 password_entry = Entry(width=21, textvariable=password_var)
 password_entry.grid(row=3, column=1)
-
+# add button
 add_button = Button(text="Add", width=36, command=save) # command=add_button)
 add_button.grid(row=4, column=1, columnspan=2)
-
+# search button
+search_button = Button(text="Search", command=search, width=13)
+search_button.grid(row=1, column=2)
 
 window.mainloop()
