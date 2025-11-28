@@ -61,9 +61,9 @@ def search():
             data = json.load(file)
             messagebox.showinfo(data[website_entry.get()], f"Email: {data[website_entry.get()]["email"]}\n Password: {data[website_entry.get()]["password"]}")
     except KeyError:
-        messagebox.showerror("Error", "No data found")
+        messagebox.showerror("Error", f"No detail for {website_entry.get()} found")
     except FileNotFoundError:
-        messagebox.showerror("Error", "No data found")
+        messagebox.showerror("Error", "There is no item in data.json yet")
 
 
 # ---------------------------- UI SETUP ------------------------------- #

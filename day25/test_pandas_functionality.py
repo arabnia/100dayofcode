@@ -20,7 +20,7 @@ data = pd.read_csv("weather_data.csv")
 #
 print(data[data.day.str.lower() == "tuesday"].empty)
 
-# print(data[data.temp == data.temp.max()].day)
+print(data[data.temp == data.temp.max()].day)
 
 # generate csv file
 # my_dict = {
