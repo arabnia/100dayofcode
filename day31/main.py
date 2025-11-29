@@ -7,11 +7,15 @@ BACKGROUND_COLOR = "#B1DDC6"
 
 ## functions ##
 # Load word file
-data = pd.read_csv("data/translated_most_freq_word.csv")
+try:
+    data = pd.read_csv("data/words_to_learn.csv")
+except FileNotFoundError:
+    data = pd.read_csv("data/translated_most_freq_word.csv")
+
 row = ""
 timer = None
 def front_card():
-    global row
+    global row, data
     row = data.sample(n=1)
     canvas.itemconfig(image_on_canvas, image=fc_front_image)
     canvas.itemconfig(canvas_title, text="English", fill="black",font=("Arial", 40, "italic"))
@@ -32,6 +36,12 @@ def key_button():
     window.after_cancel(timer)
     front_card()
     flip_card()
+
+def known_word():
+    global row, data
+    data = data.drop(index=row.index)
+    data.to_csv("data/words_to_learn.csv")
+    key_button()
 
 window = Tk()
 window.configure(background=BACKGROUND_COLOR, padx=10, pady=10)
@@ -54,7 +64,7 @@ canvas.grid(row=0, column=0, columnspan=2)
 # Button section
 right_button = Button(image=right_button_image, highlightthickness=0, width=100,height=100,
                       highlightbackground=BACKGROUND_COLOR,
-                      command=key_button)
+                      command=known_word)
 right_button.grid(row=1, column=0)
 wrong_button = Button(image=wrong_button_image, highlightthickness=0, width=100,height=100,
                       highlightbackground=BACKGROUND_COLOR,
