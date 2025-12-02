@@ -1,4 +1,5 @@
 decorator/
 .idea
 venv
+test/
 **/__pycache__/**
