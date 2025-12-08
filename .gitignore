@@ -3,3 +3,4 @@ decorator/
 venv
 test/
 **/__pycache__/**
+**/.env
