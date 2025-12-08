@@ -19,10 +19,14 @@ def weather_status():
     data.raise_for_status()
     return  data.json()["list"]
 
+if_rain = False
 for item in weather_status():
     if item["dt"] <= current_time + 86400:
-        print(f"{item["dt"]} and {current_time + 86400}")
-        print(item["weather"][0]["description"])
+        # print(f"{item["dt"]} and {current_time + 86400}")
+        # print(item["weather"][0]["id"])
+        if item["weather"][0]["id"] < 700:
+            if_rain = True
+print(if_rain)
 
 
 
