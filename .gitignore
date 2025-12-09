@@ -4,3 +4,5 @@ venv
 test/
 **/__pycache__/**
 **/.env
+pyproject.toml
+uv.lock
