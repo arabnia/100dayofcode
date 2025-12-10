@@ -1,32 +1,37 @@
-from dotenv import load_dotenv
 import os
-from datetime import datetime, timezone
+from sms_ir import SmsIr
 import requests
-# My location data
-LATITUDE = 33.540250
-LONGITUDE = 54.337667
+import json
+from dotenv import load_dotenv
 load_dotenv()
-
-current_time = datetime.now(timezone.utc).timestamp()
-payload = {
-    "lat": LATITUDE,
-    "lon": LONGITUDE,
-    "appid": os.getenv("API_TOKEN"),
-    "units": "metric"
+URL = "https://api.sms.ir/v1/send/verify"
+header = {
+        'Content-Type': 'application/json',
+        'Accept': 'text/plain',
+        'x-api-key': os.getenv("X-API-KEY")
 }
-def weather_status():
-    data = requests.get("https://api.openweathermap.org/data/2.5/forecast", params=payload)
-    data.raise_for_status()
-    return  data.json()["list"]
+body = {
+    "mobile": "9912005828",
+    "templateId": 123456,
+    "parameters": [
+      {
+        "name": "Code",
+        "value": "12345"
+      }
+    ]
+}
+r = requests.post(url=URL, json=body, headers=header)
+r.raise_for_status()
+print(r.status_code)
+print(r.json())
+print(r.text)
+print(r.url)
+print(r.headers)
+print(r.connection)
+print(r.content)
+print(r.cookies)
+print(r.history)
 
-if_rain = False
-for item in weather_status():
-    if item["dt"] <= current_time + 86400:
-        # print(f"{item["dt"]} and {current_time + 86400}")
-        # print(item["weather"][0]["id"])
-        if item["weather"][0]["id"] < 700:
-            if_rain = True
-print(if_rain)
 
 
 
