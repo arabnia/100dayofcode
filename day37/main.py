@@ -43,6 +43,6 @@ headers = {
 ## pixel section ##
 now = datetime.datetime.now().strftime("%Y%m%d")
 addpixel_url = f"{URL}/v1/users/{os.getenv("USERNAME")}/graphs/sa01"
-pixel_param = {"date": now,"quantity":"200","optionalData":"{\"key\":\"value\"}"}
+pixel_param = {"date": now,"quantity":"150","optionalData":"{\"key\":\"value\"}"}
 add_pixel_resource = requests.post(url=addpixel_url, json=pixel_param, headers=headers)
 print(add_pixel_resource.text)
