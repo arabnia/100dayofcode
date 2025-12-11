@@ -40,5 +40,6 @@ articles = [
 "content": "StableChain, which is a new layer-one blockchain network built around Tethers USDT stablecoin by a company known as Stable, went live with its mainnet today, alongside the launch of its native STABLE… [+4154 chars]"
 }
 ]
-messages = [f"Headline: {item['title']\n}" for item in articles]
+messages = [f"Headline: {item["title"]} eth up\n{item["description"]}" for item in articles]
+
 print(messages)
