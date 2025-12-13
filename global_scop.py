@@ -2,7 +2,7 @@
 may_var = 5
 
 def changing_var():
-    globals may_var
+    global may_var
     may_var = 4
     return may_var
 
