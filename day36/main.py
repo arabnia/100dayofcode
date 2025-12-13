@@ -51,5 +51,4 @@ if percent_change(pre_yesterday_close, yesterday_close) > 5:
 messages = [f"Headline: {item["title"]} {STOCK}{up_down}\n{item["description"]}" for item in response_json]
 
 ## STEP 3: Use https://www.twilio.com
-# Send a seperate message with the percentage change and each article's title and description to your phone number
 
