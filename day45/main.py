@@ -17,13 +17,13 @@ print(title_link[max_score_index])
 print(len(title_text))
 print(len(title_link))
 print(len(title_score))
-# data = pd.DataFrame(
-#     {
-#      "title": title_text,
-#      "link": title_link,
-#      "score": title_score
-#     }
-# )
-# data.to_csv("data.csv", index=False)
-# title_links = []
-# title_vote = []
+data = pd.DataFrame(
+    {
+     "title": title_text,
+     "link": title_link,
+     "score": title_score
+    }
+)
+data.to_csv("data.csv", index=False)
+title_links = []
+title_vote = []
